@@ -63,10 +63,10 @@ And you would leave it like this:
     #
     # 1. copy this file to /path/to/your/websites/images/dir/.getme
     # 2. make sure the configuration is ok
-    # 3. run get_images pointing to where your website directories are
-    #    ej. get_images /path/to/your/websites/
+    # 3. run getImages pointing to where your website directories are
+    #    ej. getImages /path/to/your/websites/
 
-    # get_images vars
+    # getImages vars
     #
 
     # main url
@@ -83,9 +83,9 @@ And you would leave it like this:
 
 -- end of  ~/hentai/websites/WarsWarz/.getme --
 
-and, now, just run get_images
+and, now, just run getImages
     
-    bash get_images ~/hentai/websites
+    bash getImages ~/hentai/websites
 
 GetImages will find all the .getme files and start downloading stuff it finds
 there. It will leave a log file too, so you know what happened.

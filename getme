@@ -1,5 +1,5 @@
 #!/bin/bash
-# GetMe file
+# GetMe configuration file
 # this file configures your site.
 #
 # 1. copy this file to /path/to/your/websites/images/dir/.getme
