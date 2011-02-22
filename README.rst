@@ -17,7 +17,9 @@ those files are stored. Make sure to select the author's images. For example,
 there are a lot of authors using blogs these days. These blogs use:
 
     image-server-42-bla.fc4.jp (or something)
+
     image-server-44-bla.fc4.jp
+    
     image-server-12-bla.fc4.jp
 
 So, if this is the case, just modify the getme script so it meets your
@@ -51,6 +53,7 @@ You go to his website and notice that he uses 2 domains for his files:
 So, now, you need to configure your getme file:
 
     cp getme ~/hentai/websites/WarsWarz/.getme
+
     gedit ~/hentai/websites/WarsWarz/.getme
 
 And you would leave it like this:
@@ -70,15 +73,19 @@ And you would leave it like this:
     #
 
     # main url
+    
     url="http://www2.ocn.ne.jp/~warz/Graphs.html http://warzwars.ifdef.jp/Graphs.html"
 
     # possible image servers (csv urls)
+    
     urls="$url,www2.ocn.ne.jp,warzwars.ifdef.jp"
 
     # user agent to use
+    
     userAgent="Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.70 Safari/533.4"
 
     # file types (csv)
+    
     types="bmp,gif,jpeg,jpg,png,svg,tiff,swf"
 
 -- end of  ~/hentai/websites/WarsWarz/.getme --
