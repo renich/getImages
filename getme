@@ -1,0 +1,28 @@
+#!/bin/bash
+# GetMe file
+# this file configures your site.
+#
+# 1. copy this file to /path/to/your/websites/images/dir/.getme
+# 2. make sure the configuration is ok
+# 3. run get_images pointing to where your website directories are
+#    ej. get_images /path/to/your/websites/
+
+# get_images vars
+#
+
+# main url
+url="http://shotaone.blog82.fc2.com/"
+
+# possible image servers (csv urls)
+urls="$url,hoppeppe.hp.infoseek.co.jp,kroah.h.fc2.com"
+
+# add possible file servers 
+for n in `seq 0 100`; do
+    urls="$urls,blog-imgs-$n-origin.fc2.com"
+done
+
+# user agent to use
+userAgent="Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.70 Safari/533.4"
+
+# file types (csv)
+types="bmp,gif,jpeg,jpg,png,svg,tiff,swf"

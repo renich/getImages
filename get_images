@@ -1,0 +1,40 @@
+#!/bin/bash
+# Get Images - Image downloader
+# Renich Bon Ciric <renich@woralelandia.com>
+# GPLv3 or >
+#
+# TODO: 
+# - add options suport
+#   * verbose
+#   * debug
+#   * logging (on|off)
+#   * list configurations|logs|urls
+#   * add website
+#   * remove website
+# - write website link inside dir
+# - write documentation
+
+# set env
+me=$( readlink -f $0 )
+mypath=$( dirname $me )
+$logging='-o get_images.log'
+
+# get parameters
+for n in $@; do
+    if [ -z $path ]; then
+       path="$( readlink -f ${n} )"
+    else
+        path="${path} $( readlink -f ${n} )"
+    fi
+done
+
+# find configured dirs
+while read config; do
+    source $config;
+    
+    cd $( dirname $config )
+    
+    wget -H -D "${urls}" -crvp -nd -nc -U "${userAgent}" -A "${types}" ${logging} ${url}
+done < <(find ${path} -type f -iname '.getme')
+
+exit 0
