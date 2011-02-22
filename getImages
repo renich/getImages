@@ -17,7 +17,7 @@
 # set env
 me=$( readlink -f $0 )
 mypath=$( dirname $me )
-$logging='-o get_images.log'
+logging='-o getImages.log'
 
 # get parameters
 for n in $@; do

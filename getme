@@ -14,9 +14,14 @@
 url="http://someone.somesite.com/"
 
 # possible image servers (csv urls)
-urls="$url,someone.someothesite.com,vault.blogs.com"
+# strip http:// and everything after / of the url
+tmp=${url#http://}
+tmp=${tmp%%/*}
 
-# add possible file servers 
+# assign alternative image server urls
+urls="${tmp},someone.somewhereelse.com,vault.blogs.com"
+
+# add possible file servers (mainly used in blogs)
 for n in `seq 0 100`; do
     urls="$urls,blog-imgs-$n.blogs.com"
 done
