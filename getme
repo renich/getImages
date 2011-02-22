@@ -11,14 +11,14 @@
 #
 
 # main url
-url="http://shotaone.blog82.fc2.com/"
+url="http://someone.somesite.com/"
 
 # possible image servers (csv urls)
-urls="$url,hoppeppe.hp.infoseek.co.jp,kroah.h.fc2.com"
+urls="$url,someone.someothesite.com,vault.blogs.com"
 
 # add possible file servers 
 for n in `seq 0 100`; do
-    urls="$urls,blog-imgs-$n-origin.fc2.com"
+    urls="$urls,blog-imgs-$n.blogs.com"
 done
 
 # user agent to use
