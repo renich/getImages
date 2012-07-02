@@ -13,6 +13,7 @@
 #   * remove website
 # - write website link inside dir
 # - write documentation
+# - list which galleries are configured already
 
 # set env
 me=$( readlink -f $0 )
@@ -34,6 +35,7 @@ while read config; do
     
     cd $( dirname $config )
     
+    echo "Getting images for: ${url}..."
     wget -H -D "${urls}" -crvp -nd -nc -U "${userAgent}" -A "${types}" ${logging} ${url}
 done < <(find ${path} -type f -iname '.getme')
 
